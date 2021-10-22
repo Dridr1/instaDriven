@@ -1,6 +1,13 @@
 *{
     font-family: Roboto;
 }
+ion-icon{
+    background-color: white;
+}
+.website{
+    background-color: #E5E5E5;
+    z-index: 0;
+}
 /* Mobile */
 /* Barra superior */
 .topo{
@@ -9,8 +16,9 @@
     display: flex;
     /* background-color: violet; */
     border-bottom: 1px solid #DBDBDB;
-    position: fixed;
+    position:fixed;
     top: 0px;
+    z-index: 2;
     background-color: white;
 }
 .barra-superior-mobile{
@@ -27,40 +35,59 @@
     height: 29px;
     background-color: white;
 }
-.ion-icon{
-    background-color: white;
-}
-
 /* Storys */
 .storys{
-    background-color: violet;
+
     height: 118px;
     width: 100%;
     display: flex;
     margin-top: 54px;
     align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+    z-index: 1;
+    position: relative;
+
 }
 .story{
     height: 86px;
     width: 66px;
-    background-color: wheat;
-    margin-right: 14px;
+    /* background-color: wheat; */
+    margin-left: 18px;
+    margin-right: -4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
-
+.story-background{
+    height: 66px;
+    width: 66px;
+    position: absolute;
+    border-radius: 33px;
+    top: 0;
+}
+.story-profile-picture{
+    height: 56px;
+    width: 56px;
+    border-radius: 28px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
 /* Feed */
 .feed{
     display: flex;
     width: 100%;
     height: auto;
     flex-direction: column;
+    background-color: #E5E5E5;
 }
 .post{
     width: 100%;
+    background-color: white;
     border: 1px solid #DBDBDB;
     margin-bottom: 60px;
+    z-index: 1;
 }
 .post-topo{
     display: flex;
@@ -97,6 +124,7 @@
 .options-left ion-icon{
     margin-right: 18px;
     font-size: 18px;
+    z-index: -1;
 }
 .options-right{
     font-size: 18px;
@@ -124,10 +152,13 @@
 .barra-inferior{
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    background-color: white;
     height: 54px;
-    background-color: turquoise;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    border: solid 1px #DBDBDB;
+    font-size: 20px;
+    z-index: 2;
 }
