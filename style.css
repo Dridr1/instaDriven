@@ -1,0 +1,133 @@
+*{
+    font-family: Roboto;
+}
+/* Mobile */
+/* Barra superior */
+.topo{
+    height: 54px;
+    width: 100%;
+    display: flex;
+    /* background-color: violet; */
+    border-bottom: 1px solid #DBDBDB;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+}
+.barra-superior-mobile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px 0 20px;
+    font-size: 21px;
+    background-color: white;
+}
+.barra-superior-mobile img{
+    height: 29px;
+    background-color: white;
+}
+.ion-icon{
+    background-color: white;
+}
+
+/* Storys */
+.storys{
+    background-color: violet;
+    height: 118px;
+    width: 100%;
+    display: flex;
+    margin-top: 54px;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.story{
+    height: 86px;
+    width: 66px;
+    background-color: wheat;
+    margin-right: 14px;
+}
+
+/* Feed */
+.feed{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.post{
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 60px;
+}
+.post-topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 17px 15px 17px;
+}
+.post-topo img{
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+}
+.post-user{
+    display: flex;
+    align-items: center;
+}
+.post-user span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 15px;
+}
+.post-img img{
+    width: 100%;
+    height: auto;
+}
+.post-options{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 17px 7px 17px;
+}
+.options-left ion-icon{
+    margin-right: 18px;
+    font-size: 18px;
+}
+.options-right{
+    font-size: 18px;
+}
+.post-likes{
+    display: flex;
+    padding-left: 17px;
+    padding-bottom: 14px;
+    align-items: center;
+}
+.post-likes img{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+.post-likes span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 5px;
+}
+/* Barra inferior */
+.barra-inferior{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 54px;
+    background-color: turquoise;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
