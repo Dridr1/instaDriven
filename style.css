@@ -5,6 +5,9 @@
 * ::-webkit-scrollbar{
     display: none;
 }
+a{
+    text-decoration: none;
+}
 ion-icon{
     background-color: white;
 }
@@ -54,18 +57,27 @@ ion-icon{
     position: relative;
     overflow: auto;
     white-space: nowrap;
+    padding-left: 10px;
 }
 .story{
     height: 86px;
-    width: 66px;
-    /* background-color: wheat; */
-    margin-left: 18px;
-    margin-right: px;
+    min-width: 70px;
+    /* max-width: 66px; */
+    overflow: hidden;
+    margin-left: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    text-align: center;
+}
+.story span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
 }
 .story-background{
     height: 66px;
@@ -73,6 +85,7 @@ ion-icon{
     position: absolute;
     border-radius: 33px;
     top: 0;
+    left: 2px;
 }
 .story-profile-picture{
     height: 56px;
@@ -80,7 +93,9 @@ ion-icon{
     border-radius: 28px;
     position: absolute;
     top: 5px;
-    left: 0.5px;
+    left: 7px;
+    object-fit: cover;
+}
 }
 /* Feed */
 .feed{
@@ -107,6 +122,7 @@ ion-icon{
     height: 32px;
     width: 32px;
     border-radius: 16px;
+    object-fit: cover;
 }
 .post-user{
     display: flex;
@@ -120,7 +136,7 @@ ion-icon{
     line-height: 16px;
     margin-left: 15px;
 }
-.post-img img{
+.post-img img, video{
     width: 100%;
     height: auto;
 }
@@ -150,7 +166,6 @@ ion-icon{
 }
 .post-likes span{
     font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 16px;
@@ -246,20 +261,32 @@ ion-icon{
         display: none;
     }
 }
+/* Desktop com sidebar */
 @media (min-width: 935px) {
+    .barra-superior-desktop{
+        max-width: 935px;
+    }
+    .topo{
+        justify-content: center;
+    }
     .content{
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: center;
     }
+    .side-container{
+        width: 293px;
+        margin-left: 29px;
+    }
     .sidebar{
         display: flex;
-        width: 292px;
-        height: 400px;
-        background-color: dimgray;
-        margin-top: 88px;
-        margin-left: 29px;
+        width: 293px;
+        height: fit-content;
+        position: fixed;
+        margin-top: 112px;
+        
+        flex-direction: column;
     }
     .perfil-sidebar{
         display: flex;
@@ -277,5 +304,88 @@ ion-icon{
         display: flex;
         flex-direction: column;
         font-family: Roboto;
+    }
+    .arroba-nome :first-child{
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+    .arroba-nome :last-child{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16px;
+    }
+    .sugestoes-sidebar-top{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        margin-bottom: 18px;
+    }
+    .sugestoes-sidebar-top :first-child{
+        color: #8e8e8e;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .sugestoes-sidebar-top :last-child{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .perfil-sugerido{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    .perfil-sugerido img{
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        margin-right: 11px;
+        object-fit:cover;
+    }
+    .arroba-status-sugeridos{
+        display: flex;
+        flex-direction: column;
+    }
+    .arroba-status-sugeridos :first-child{
+        color: #262626;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 4px;
+    }
+    .arroba-status-sugeridos :last-child{
+        color: #8e8e8e;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .perfil-sugerido div{
+        display: flex;
+    }
+    .perfil-sugerido span{
+        color:#139EF2;
+    }
+    .links-sidebar{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        margin-top: 18px;
+    }
+    .links-sidebar a{
+        color: #C7C7C7;
+        text-align: start;
     }
 }
