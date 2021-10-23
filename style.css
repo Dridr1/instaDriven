@@ -1,5 +1,9 @@
+/* MOBILE FIRST IS DA WAE!!! */
 *{
     font-family: Roboto;
+}
+* ::-webkit-scrollbar{
+    display: none;
 }
 ion-icon{
     background-color: white;
@@ -7,6 +11,7 @@ ion-icon{
 .website{
     background-color: #E5E5E5;
     z-index: 0;
+    height: 100%;
 }
 /* Mobile */
 /* Barra superior */
@@ -20,6 +25,9 @@ ion-icon{
     top: 0px;
     z-index: 2;
     background-color: white;
+}
+.barra-superior-desktop{
+    display: none;
 }
 .barra-superior-mobile{
     width: 100%;
@@ -37,7 +45,6 @@ ion-icon{
 }
 /* Storys */
 .storys{
-
     height: 118px;
     width: 100%;
     display: flex;
@@ -45,14 +52,15 @@ ion-icon{
     align-items: center;
     z-index: 1;
     position: relative;
-
+    overflow: auto;
+    white-space: nowrap;
 }
 .story{
     height: 86px;
     width: 66px;
     /* background-color: wheat; */
     margin-left: 18px;
-    margin-right: -4px;
+    margin-right: px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -72,7 +80,7 @@ ion-icon{
     border-radius: 28px;
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 0.5px;
 }
 /* Feed */
 .feed{
@@ -161,4 +169,113 @@ ion-icon{
     border: solid 1px #DBDBDB;
     font-size: 20px;
     z-index: 2;
+}
+.sidebar{
+    display: none;
+}
+/* Desktop reduzido */
+@media (min-width: 614px) {
+    /* Barra superior */
+    .barra-superior-mobile{
+        display: none;
+    }
+    .barra-superior-desktop{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+    .logo-desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 22px;
+    }
+    .logo-desktop ion-icon{
+        margin-bottom: 5px;
+    }
+    .barra-vertical{
+        height: 22px;
+        width: 1px;
+        border: solid 1px #DBDBDB;
+        margin: 0 10px 5px 10px;
+    }
+    .barra-superior-desktop input{
+        text-align: center;
+    }
+    .menu{
+        font-size: 22px;
+    }
+    .menu ion-icon{
+        margin-left: 22px;
+    }
+    /* posts */
+    .posts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    /* Storys */
+    .storys{
+        background-color: white;
+        width: 614px;
+        margin-top: 88px;
+        margin-bottom: 24px;
+    }
+    .seta-stories{
+        position: absolute;
+        right: 35px;
+        top: 128px;
+        z-index: 2;
+        font-size: 26px;
+        border-radius: 13px;
+    }
+    /* feed */
+    .feed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .post{
+        width: 614px;
+    }
+    .barra-inferior{
+        display: none;
+    }
+}
+@media (min-width: 935px) {
+    .content{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .sidebar{
+        display: flex;
+        width: 292px;
+        height: 400px;
+        background-color: dimgray;
+        margin-top: 88px;
+        margin-left: 29px;
+    }
+    .perfil-sidebar{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 56px;
+    }
+    .perfil-sidebar img{
+        height: 56px;
+        width: 56px;
+        border-radius: 28px;
+        margin-right: 17px;
+    }
+    .arroba-nome{
+        display: flex;
+        flex-direction: column;
+        font-family: Roboto;
+    }
 }
